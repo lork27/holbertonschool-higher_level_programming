@@ -6,7 +6,7 @@ def remove_char_at(str, n):
     for i in str:
         num += 1
         if num == n:
-            pass
+            continue
         else:
             newstr += i
     print('{}'.format(newstr), end='')
