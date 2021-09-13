@@ -7,5 +7,4 @@ if a < b:
         c = add(c, i)
     return(c)
 else:
-    c = sub(a, b)
-    return(c)
+    return(sub(a, b)
