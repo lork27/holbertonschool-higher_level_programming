@@ -5,5 +5,4 @@ def best_score(a_dictionary):
     if not a_dictionary:
         return None
     else:
-        first = list(sorted(a_dictionary.keys()))[-1]
-        return first
+        return list(sorted(a_dictionary.keys()))[-1]
