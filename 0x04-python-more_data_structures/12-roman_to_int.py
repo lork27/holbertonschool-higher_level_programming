@@ -2,7 +2,7 @@
 
 
 def roman_to_int(roman_string):
-    if not roman_string:
+    if not roman_string or not isinstance(roman_string, str):
         return None
     romans = {'I': 1,
               'V': 5,
@@ -27,4 +27,4 @@ def roman_to_int(roman_string):
         else:
             total += romans[roman_string[i]]
             i += 1
-    return str(total)
+    return total
