@@ -2,6 +2,8 @@
 
 
 def weight_average(my_list=[]):
+    if not mylist:
+        return 0
 
     total = 0
     divisor = 0
