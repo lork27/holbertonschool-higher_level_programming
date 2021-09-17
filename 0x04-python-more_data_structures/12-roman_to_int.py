@@ -27,4 +27,4 @@ def roman_to_int(roman_string):
         else:
             total += romans[roman_string[i]]
             i += 1
-    return total
+    return str(total)
