@@ -9,6 +9,7 @@ def safe_print_list(my_list=[], x=0):
         except Exception:
             continue
         else:
-            print(my_list[i])
+            print("{}".format(my_list[i]), end="")
             j += 1
+    print()
     return j
