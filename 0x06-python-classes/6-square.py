@@ -40,6 +40,10 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    def area(self):
+        """def method"""
+        return self.__size * self.__size
+
     def my_print(self):
         """def method"""
         if self.__size == 0:
@@ -53,7 +57,3 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print()
-
-    def area(self):
-        """def method"""
-        return self.__size * self.__size
