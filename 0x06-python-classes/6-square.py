@@ -25,8 +25,7 @@ class Square:
            type(value[0]) is not int or\
            type(value[1]) is not int or value[0] < 0 or value[1] < 0:
             raise TypeError(s)
-        else:
-            self._position = value
+        self._position = value
 
     @property
     def size(self):
@@ -39,8 +38,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
     def my_print(self):
         """def method"""
