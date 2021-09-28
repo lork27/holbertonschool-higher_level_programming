@@ -40,7 +40,10 @@ class Square:
         elif self.__size > 0:
             for i in range(self.__size):
                 for x in range(self.__position[0]):
-                    print(" ", end="")
+                    if self.__position[1] > 0:
+                        continue
+                    else:
+                        print(" ", end="")
                 for j in range(self.__size):
                     print("#", end="")
                 print()
