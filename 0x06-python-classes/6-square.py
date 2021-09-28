@@ -14,7 +14,7 @@ class Square:
 
     @property
     def position(self):
-        """def position"""
+        """position"""
         return self._position
 
     @position.setter
@@ -39,7 +39,8 @@ class Square:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
     def my_print(self):
         """def method"""
