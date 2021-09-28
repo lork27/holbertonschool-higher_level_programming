@@ -27,8 +27,7 @@ class Square:
             raise TypeError(s)
         elif type(value) is not tuple:
             raise TypeError(s)
-        else:
-            self._position = value
+        self._position = value
 
     @property
     def size(self):
