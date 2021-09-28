@@ -25,7 +25,7 @@ class Square:
             raise TypeError(s)
         elif value[0] < 0 or value[1] < 0:
             raise TypeError(s)
-        elif type(value) is not tuple:
+        elif type(value) is not tuple or len(value) != 2:
             raise TypeError(s)
         self._position = value
 
