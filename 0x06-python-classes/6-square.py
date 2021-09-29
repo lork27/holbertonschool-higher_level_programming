@@ -9,13 +9,13 @@ class Square:
         args:
             size: size of square
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def position(self):
         """position"""
-        return self._position
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -25,7 +25,7 @@ class Square:
            type(value[0]) is not int or\
            type(value[1]) is not int or value[0] < 0 or value[1] < 0:
             raise TypeError(s)
-        self._position = value
+        self.__position = value
 
     @property
     def size(self):
