@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+""" Module that contains a function that takes text and adds indentation """
 
 
 def text_indentation(text):
+    """text_indentation: function that prints indented text
+    parameters:
+        text: text to be indented
+    Raised:
+        TyperError: if text is not string type
+    """
     match = "?.:"
     if not isinstance(text, str):
         raise TypeError("text must be a string")
