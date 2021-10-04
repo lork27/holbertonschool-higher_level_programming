@@ -46,14 +46,17 @@ class Rectangle:
 
     """public methods below"""
     def area(self):
+        """calculates area"""
         return self.__height * self.__width
 
     def perimeter(self):
+        """calculates perimeter"""
         if self.__height == 0 or self.__width == 0:
             return 0
         return ((self.__height * 2) + (self.__width * 2))
 
     def __str__(self):
+        """str representation of object"""
         string = ""
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -66,6 +69,7 @@ class Rectangle:
         return string[:-1]
 
     def __repr__(self):
+        """representation of object"""
         string = "Rectangle"
         string += "(" + str(self.__width) + ", " + str(self.__height) + ")"
         return string
