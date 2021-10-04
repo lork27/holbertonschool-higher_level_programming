@@ -30,7 +30,6 @@ class Rectangle:
         self.__width = value
 
     """ height getter and setter """
-
     @property
     def height(self):
         """height getter"""
@@ -64,5 +63,4 @@ class Rectangle:
             for j in range(self.__width - 1):
                 string += "#"
             string += "\n"
-
-        return string
+        return string[:-1]
