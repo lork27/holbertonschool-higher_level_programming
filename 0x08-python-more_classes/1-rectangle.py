@@ -5,8 +5,8 @@
 class Rectangle:
     """class containts """
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = width
+        self.height = height
+        self.width = width
 
     """ width getter and setter """
 
@@ -29,7 +29,7 @@ class Rectangle:
     @property
     def height(self):
         """height getter"""
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -38,3 +38,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise TypeError("height must be >= 0")
+        self.__height = value
