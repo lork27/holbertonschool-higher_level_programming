@@ -75,4 +75,5 @@ class Rectangle:
         return string
 
     def __del__(self):
-        return "Bye rectangle. . ."
+        """del method"""
+        print("Bye rectangle...")
