@@ -5,6 +5,7 @@
 class Rectangle:
     """class containts height and width"""
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """init first instance of class
@@ -14,7 +15,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        type(self).print_symbol = "#"
+        type(self).print_symbol = self.print_symbol
         type(self).number_of_instances += 1
 
     """ width getter and setter """
