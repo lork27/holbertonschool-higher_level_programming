@@ -39,7 +39,8 @@ it even account for multiple spaces?
 <BLANKLINE>
 It wont print them!
 
-
+>>> text_indentation(" hola")
+ hola
 
 Edge Cases and errors
 =====================
