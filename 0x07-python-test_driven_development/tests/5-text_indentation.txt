@@ -1,0 +1,62 @@
+============================
+DOCTEST for 5-text_indentation.py
+============================
+""" How to test text_indentation() function """
+# python3 -m doctest -v ./test/text_indentation.txt
+
+___________________________________________
+
+""" Importing the text_indentation() function """
+___________________________________________
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Normal Usage
+============
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
+>>> text_indentation("Normal string with no special characters")
+Normal string with no special characters
+
+>>> text_indentation("This string has all? characters that cause. the indentation to: occur!")
+This string has all?
+<BLANKLINE>
+characters that cause.
+<BLANKLINE>
+the indentation to:
+<BLANKLINE>
+occur!
+
+>>> text_indentation("it even account for multiple spaces?      It wont print them!")
+it even account for multiple spaces?
+<BLANKLINE>
+It wont print them!
+
+
+
+Edge Cases and errors
+=====================
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(27)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("")
