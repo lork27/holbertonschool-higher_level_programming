@@ -9,7 +9,7 @@ def print_square(size):
     Raised:
         TyperError: if size is less than 0 or not int
     """
-    if size is not int:
+    if type(size) != int:
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")
