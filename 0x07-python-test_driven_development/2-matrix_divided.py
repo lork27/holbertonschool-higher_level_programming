@@ -3,16 +3,6 @@
 
 
 def matrix_divided(matrix, div):
-    """matrix_divided: functions that divides all elements of a matrix
-    parameters:
-        matrix: list of lists that contains numbers
-        div: division factor of each elements of matrix
-    Raised:
-        TypeError: if each row is not the same as the others
-        TypeError: if any row is not composed solely of ints or floats
-        TypeError: if div is not a number
-        ZeroDivisionError: if div is equal 0
-    """
     error = "matrix must be a matrix (list of lists) of integers/floats"
 
     if type(matrix) != list:
