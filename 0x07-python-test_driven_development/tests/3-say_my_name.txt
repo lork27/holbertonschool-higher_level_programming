@@ -23,7 +23,7 @@ My name is Walter White
 
 <My name is Guille>
 >>> say_my_name("Guille")
-My name is Guille
+My name is Guille 
 
 
 Edge Cases
@@ -33,12 +33,6 @@ Edge Cases
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
-
->>> say_my_name(27, "Lamadrid")
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
-
 
 >>> say_my_name("Guillermo", 27)
 Traceback (most recent call last):
@@ -74,3 +68,8 @@ TypeError: last_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
+
+>>> say_my_name("Guillermo", "Lorca", "Lamadrid")
+Traceback (most recent call last):
+...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
