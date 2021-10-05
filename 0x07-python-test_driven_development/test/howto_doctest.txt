@@ -1,7 +1,0 @@
-#How torun doctest thru text file
-import doctest
-doctest.testfile("example.txt")
-
-$ python3 -m doctest -v example.txt
-	#this to run test
-
