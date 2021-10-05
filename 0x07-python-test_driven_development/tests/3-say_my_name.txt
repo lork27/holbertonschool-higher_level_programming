@@ -1,0 +1,45 @@
+============================
+DOCTEST for 3-say_my_name.py
+============================
+""" How to test name_of_func() function """
+# python3 -m doctest -v ./test/x-file_test.txt
+
+___________________________________________
+
+""" Importing the say_my_name() function """
+___________________________________________
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Normal Usage
+============
+<My name is John Smith>
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+<My name is Walter White>
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+<My name is Guille>
+>>> say_my_name("Guille")
+My name is Guille
+
+
+Edge Cases
+==========
+
+>>> say_my_name(27, "Lamadrid")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(None, "Lamadrid")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+
+Missing Arguments
+=================
+
