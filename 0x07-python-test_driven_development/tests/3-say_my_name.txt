@@ -25,6 +25,11 @@ My name is Walter White
 >>> say_my_name("Guille")
 My name is Guille 
 
+>>> say_my_name("", "Lorca")
+My name is  Lorca
+
+>>> say_my_name("", "")
+My name is  
 
 Edge Cases
 ==========
