@@ -1,5 +1,5 @@
 ============================
-DOCTEST for 0-add_integer.py
+DOCTEST for 2-matrix_divided.py
 ============================
 """ How to test matrix_divided() function """
 # python3 -m doctest -v ./test/0-add_integer.txt
@@ -11,9 +11,9 @@ ___________________________________________
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
- _____________
-|SUCCESS CASES|
- -------------
+Normal Usage
+============
+
 >>> matrix = [
 ...     [1, 2, 3],
 ...     [4, 5, 6]
@@ -22,22 +22,115 @@ ___________________________________________
 >>> matrix_divided(matrix, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
+OLD MATRIX IS NOT MODIFIED
+==========================
+>>> print(matrix)
+[[1, 2, 3], [4, 5, 6]]
 
 >>> matrix_divided(matrix, 4)
 [[0.25, 0.5, 0.75], [1.0, 1.25, 1.5]]
 
- __________
-|FAIL TESTS|
-------------
+>>> matrix = [
+...     [1.2, 2.3, 3.4],
+...     [4.5, 5.7, 6.8]
+... ]
 
-#to-do-failtests
-	#test all raise errors: div is 0, div is not a float/int
-	#that matrix is a list of ints/floats
-	#each row must be the same size
-	#that it returns a new matrix and the old one is left alone??
-	
+>>> matrix_divided(matrix, 3)
+[[0.4, 0.77, 1.13], [1.5, 1.9, 2.27]]
 
-TEST PASSING INCORRECT PARAMETERS:
-==================================
+>>> matrix = [
+...     [-1.2, -2.3, -3.4],
+...     [-4.5, -5.7, -6.8]
+... ]
+
+>>> matrix_divided(matrix, 3)
+[[-0.4, -0.77, -1.13], [-1.5, -1.9, -2.27]]
+
+>>> matrix = [
+...     [-1.2, 2.3, -3.4],
+...     [-4.5, 5.7, -6.8]
+... ]
+
+>>> matrix_divided(matrix, 3)
+[[-0.4, 0.77, -1.13], [-1.5, 1.9, -2.27]]
 
 
+
+
+Edge Cases
+==========
+
+Incorrect data type within matrix
+
+>>> matrix = [
+...     [1, 2, "hola"],
+...     [4, 5, 6]
+... ]
+
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [
+...     [1, 2, None],
+...     [4, 5, 6]
+... ]
+
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [
+...     [1, 2,],
+...     [4, 5, 6]
+... ]
+
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+Div by 1 and 0
+==============
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+>>> matrix_divided(matrix, 1)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+Missing Arguments
+=================
+
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+
+>>> matrix_divided(matrix, )
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> matrix_divided(None)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided(None, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
