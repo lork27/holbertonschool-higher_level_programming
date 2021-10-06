@@ -3,6 +3,7 @@
 
 
 def text_indentation(text):
+    """comment"""
     match = ".?:\n"
     if not isinstance(text, str):
         raise TypeError("text must be a string")
