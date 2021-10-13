@@ -5,7 +5,7 @@ attribute to an object if possible"""
 
 def add_attribute(obj, name, att):
     """function that tries to add attribute to class"""
-    if hasattr(obj, "__module__"):
+    if hasattr(obj, "__dict__"):
         setattr(obj, name, att)
     else:
         raise TypeError("can't add new attribute")
