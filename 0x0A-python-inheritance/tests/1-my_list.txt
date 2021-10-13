@@ -1,30 +1,45 @@
 ============================
-DOCTEST for x-name_of_file.py
+DOCTEST for 1-my_list.py
 ============================
 """ How to test name_of_func() function """
-# python3 -m doctest -v ./test/x-file_test.txt
+# python3 -m doctest -v ./test/1-my_list.txt
 
 ___________________________________________
 
-""" Importing the function_name() function """
+""" Importing the class """
 ___________________________________________
 
->>> matrix_divided = __import__('x-name_of_func').name_of_func
+>>> MyList = __import__('1-my_list').MyList
 
 Normal Usage
 ============
-<expected ouput here>
->>> name_of_func(parameter, parameter)
-expected correct ouput
+>>> my_list = MyList()
+>>> type(my_list)
+<class '1-my_list.MyList'>
+
+>>> print(my_list)
+[]
+
+>>> my_list.print_sorted()
+[]
+
+>>> my_list = ([1, 4, 3, 2, 5])
+
+>>> print(my_list)
+[1, 4, 3, 2, 5]
+
+
+>>> my_list = ([1, 4, 3, 2, 5])
+
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
 
 Edge Cases
 ==========
 
->>> name_of_func(parameter, somethingwrong)
-typeoferror(text of error)
+>>> my_list.print_sorted(argument)
+Traceback (most recent call last):
 ...
-typeroferror(text of error)
-
-Missing Arguments
-=================
-
+TypeError: print_sorted() takes 1 positional argument but 2 were given
