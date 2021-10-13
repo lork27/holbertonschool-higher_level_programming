@@ -44,6 +44,11 @@ Normal Usage
 >>> neg.print_sorted()
 [-22, -3, 2]
 
+>>> new = MyList()
+>>> new.append(1)
+>>> new.print_sorted()
+[1]
+
 Edge Cases
 ==========
 
