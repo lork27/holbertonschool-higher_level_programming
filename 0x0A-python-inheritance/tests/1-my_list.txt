@@ -30,12 +30,18 @@ Normal Usage
 >>> my_list.print_sorted()
 [1, 2, 3]
 
+>>> print(my_list)
+[1, 2, 3]
+
 >>> unsorted = MyList()
 >>> unsorted.append(3)
 >>> unsorted.append(1)
 >>> unsorted.append(2)
 >>> unsorted.print_sorted()
 [1, 2, 3]
+
+>>> print(unsorted)
+[3, 1, 2]
 
 >>> neg = MyList()
 >>> neg.append(-3)
