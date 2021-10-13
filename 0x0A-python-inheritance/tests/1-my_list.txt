@@ -23,23 +23,33 @@ Normal Usage
 >>> my_list.print_sorted()
 []
 
->>> my_list = ([1, 4, 3, 2, 5])
-
->>> print(my_list)
-[1, 4, 3, 2, 5]
-
-
->>> my_list = ([1, 4, 3, 2, 5])
-
-
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(3)
 >>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
+[1, 2, 3]
+
+>>> unsorted = MyList()
+>>> unsorted.append(3)
+>>> unsorted.append(1)
+>>> unsorted.append(2)
+>>> unsorted.print_sorted()
+[1, 2, 3]
+
+>>> neg = MyList()
+>>> neg.append(-3)
+>>> neg.append(-22)
+>>> neg.append(2)
+>>> neg.print_sorted()
+[-22, -3, 2]
+
 
 
 Edge Cases
 ==========
 
->>> my_list.print_sorted(argument)
+>>> my_list.print_sorted([1, 5, 2])
 Traceback (most recent call last):
 ...
 TypeError: print_sorted() takes 1 positional argument but 2 were given
