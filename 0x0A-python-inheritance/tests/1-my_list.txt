@@ -44,10 +44,17 @@ Normal Usage
 >>> neg.print_sorted()
 [-22, -3, 2]
 
-
-
 Edge Cases
 ==========
+
+>>> wrong = MyList()
+>>> wrong.append('a')
+>>> wrong.append(22)
+>>> wrong.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'int' and 'str'
+
 
 >>> my_list.print_sorted([1, 5, 2])
 Traceback (most recent call last):
