@@ -14,5 +14,19 @@ class Square(Rectangle):
         self.y = y
 
     def __str__(self):
+        '''overload of str method'''
         s = "[Square] ({}) {}/{} - {}"
         return s.format(self.id, self.x, self.y, self.width)
+
+    '''setter and getter for size'''
+    @property
+    def size(self):
+        '''size getter'''
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        '''size setter'''
+        super().__is_int(value, "width")
+        super().__greater_than_zero(value, "width")
+        self.__size = value
