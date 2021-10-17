@@ -1,4 +1,4 @@
-usr/bin/python3
+#!/usr/bin/python3
 '''module that contains Rectangle Class'''
 from models.base import Base
 
