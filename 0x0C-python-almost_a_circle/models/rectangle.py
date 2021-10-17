@@ -18,7 +18,11 @@ class Rectangle(Base):
         return s.format(self.id, self.x, self.y, self.width, self.height)
 
     def display(self):
+        for idx in range(self.y):
+            print()
         for i in range(self.height):
+            for idy in range(self.x):
+                print(" ", end="")
             for j in range(self.width):
                 print("#", end="")
             print()
