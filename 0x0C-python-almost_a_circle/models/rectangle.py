@@ -8,10 +8,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         '''initializes rectangle object'''
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     '''width setter and getter'''
 
@@ -23,6 +23,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         '''width setter'''
+        self.__is_int(value, "width")
+        self.__greater_than_zero(value, "width")
         self.__width = value
 
     '''height setter and getter'''
@@ -35,6 +37,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         '''height setter'''
+        self.__is_int(value, "height")
+        self.__greater_than_zero(value, "height")
         self.__height = value
 
     '''x setter and getter'''
@@ -47,6 +51,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         '''x setter'''
+        self.__is_int(value, "x")
+        self.__not_neg(value, "x")
         self.__x = value
 
     '''y setter and getter'''
@@ -59,4 +65,22 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         '''y setter'''
+        self.__is_int(value, "y")
+        self.__not_neg(value, "y")
         self.__y = value
+
+    '''private methods for input validation'''
+    def __is_int(self, value, name):
+        '''private method that checks if value is int'''
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+
+    def __greater_than_zero(self, value, name):
+        '''private method that checks if value is > 0'''
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(name))
+
+    def __not_neg(self, value, name):
+        '''private method that checks if value is negativa'''
+        if value < 0:
+            raise ValueError("{} must be >= 0".format(name))
