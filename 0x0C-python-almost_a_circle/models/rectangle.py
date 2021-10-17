@@ -131,6 +131,7 @@ class Rectangle(Base):
             raise ValueError("{} must be >= 0".format(name))
 
     def to_dictionary(self):
+        '''returns dictionary representation of object'''
         return {
                 'x': self.x,
                 'y': self.y,

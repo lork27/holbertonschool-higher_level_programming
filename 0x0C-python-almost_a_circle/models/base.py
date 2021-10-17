@@ -39,3 +39,13 @@ class Base:
                 list_of_dict.append(obj.to_dictionary())
             with open(cls.__name__ + ".json", 'w', encoding="utf-8") as file:
                 file.write(Base.to_json_string(list_of_dict))
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''returns an instance with all attributes already set'''
+
+        #create empty instance
+            #if cls.__name__ == Square, empty = cls(atts of square)
+            #else empty = cls(atts of square)
+        #empty.update(dictionary)
+        #tirate al suelo y rueda
