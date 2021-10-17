@@ -13,10 +13,14 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        s = "[Rectangle] ({}) {}/{} - {}/{}"
+        return s.format(self.id, self.x, self.y, self.width, self.height)
+
     def display(self):
         for i in range(self.height):
             for j in range(self.width):
-                print("#",end="")
+                print("#", end="")
             print()
     '''width setter and getter'''
 
@@ -73,7 +77,6 @@ class Rectangle(Base):
         self.__is_int(value, "y")
         self.__not_neg(value, "y")
         self.__y = value
-
 
     '''public methods'''
     def area(self):
