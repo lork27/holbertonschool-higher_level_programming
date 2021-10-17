@@ -129,3 +129,12 @@ class Rectangle(Base):
         '''private method that checks if value is negativa'''
         if value < 0:
             raise ValueError("{} must be >= 0".format(name))
+
+    def to_dictionary(self):
+        return {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width
+                }
