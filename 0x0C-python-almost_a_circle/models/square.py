@@ -22,11 +22,10 @@ class Square(Rectangle):
     @property
     def size(self):
         '''size getter'''
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         '''size setter'''
-        super().__is_int(value, "width")
-        super().__greater_than_zero(value, "width")
-        self.__size = value
+        self.width = value
+        self.height = value
