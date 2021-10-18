@@ -18,6 +18,8 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         '''returns json representation of list of dictionaries'''
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return []
         return json.dumps(list_dictionaries)
 
     @staticmethod
@@ -43,9 +45,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         '''returns an instance with all attributes already set'''
-
-        #create empty instance
-            #if cls.__name__ == Square, empty = cls(atts of square)
-            #else empty = cls(atts of square)
-        #empty.update(dictionary)
-        #tirate al suelo y rueda
+        if cls.__name__ == "Square":
+            newobj = cls(1)
+            newobj.update(**dictionary)
+            return newobj
+        if cls.__name__ == "Rectangle":
+            newobj = cls(1, 1)
+            newobj.update(**dictionary)
+            return newobj
