@@ -69,9 +69,6 @@ class Base:
             return []
 
     '''cvs methods'''
-    '''
-    
-    '''
     @classmethod
     def save_to_file_cvs(cls, list_objs):
         '''saves CVS representation of an object to a text file'''
