@@ -69,6 +69,9 @@ class Base:
             return []
 
     '''cvs methods'''
+    '''
+    
+    '''
     @classmethod
     def save_to_file_cvs(cls, list_objs):
         '''saves CVS representation of an object to a text file'''
@@ -83,7 +86,7 @@ class Base:
                 file.write(Base.to_json_string(list_of_dict))
 
     @classmethod
-    def load_from_file(cls):
+    def load_from_file_cvs(cls):
         '''returns a list of instances from a cvs file'''
         filename = cls.__name__ + ".cvs"
         list_objs = []
