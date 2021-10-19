@@ -58,12 +58,12 @@ class Base:
     def load_from_file(cls):
         '''returns a list of instances from a json file'''
         filename = cls.__name__ + ".json"
-        list_instance = []
-        instance = ""
-        with open(filename, 'r', encoding="utf-8") as file:
-            list_instance = Base.create()
-            instance = Base.from_json_string(file)
-            return list_instance
-        #in this withopen I need to create the iterable list
-        #loop through it adding it to the list (creating a list of dicts)
-        #then return said list of dicts???
+        list_objs = []
+        try:
+            with open(filename, 'r', encoding="utf-8") as f:
+                list_instance = Base.from_json_string(f.read())
+                for dict in list_instance:
+                    list_objs.append((cls.create(**dict)))
+                return list_objs
+        except IOError:
+            return []
