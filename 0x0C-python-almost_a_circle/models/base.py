@@ -88,3 +88,19 @@ class Base:
                 wr.writeheader()
                 for dic in list_of_dict:
                     wr.writerow(dic)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''returns a list of instances from a csv file'''
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, 'r', encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                list_objs = []
+                for row in reader:
+                    for val in row:
+                        row[val] = int(row[val])
+                    list_objs.append((cls.create(**row)))
+                return list_objs
+        except IOError:
+            return []
