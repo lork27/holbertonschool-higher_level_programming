@@ -1,2 +1,2 @@
 -- deletes database
-SHOW TABLES FROM $1;
+SHOW TABLES FROM mysql;
