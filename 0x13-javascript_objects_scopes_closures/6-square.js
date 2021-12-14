@@ -12,7 +12,7 @@ class Square extends BaseSquare {
       for (let j = 0; j < this.size; j++) {
         process.stdout.write(c);
       }
-      console.log('');
+      process.stdout.write('\n');
     }
   }
 }
