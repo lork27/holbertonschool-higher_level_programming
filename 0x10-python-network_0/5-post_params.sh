@@ -1,3 +1,3 @@
 #!/bin/bash
 #display body of the get response
-curl -X POST -s -H 'email:test@gmail.com' -H 'subject:I will always be here for PLD' $1
+curl -s -X POST -s 'email:test@gmail.com' -s 'subject:I will always be here for PLD' $1
