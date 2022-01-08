@@ -1,3 +1,3 @@
 #!/bin/bash
 #display body of the get response
-curl -s -i -X OPTIONS "$1"
+curl -s -i -X * "$1"
