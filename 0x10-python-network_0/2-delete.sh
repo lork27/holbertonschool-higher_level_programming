@@ -1,3 +1,3 @@
 #!/bin/bash
 #display body of the get response
-curl -sX "DELETE "$1"
+curl -s -X DELETE "$1"
