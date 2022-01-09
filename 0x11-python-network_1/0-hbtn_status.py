@@ -2,7 +2,8 @@
 '''python module that fetches url with urllib and prints it'''
 import urllib.request
 if __name__ == '__main__':
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    url = urllib.request.Request('https://intranet.hbtn.io/status')
+    with urllib.request.urlopen(url) as response:
         html = response.read()
         print("""Body response:
         - type: {}
