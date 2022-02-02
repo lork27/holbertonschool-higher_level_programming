@@ -13,5 +13,11 @@ r(url, function (a, response, body) {
     }
   });
 
-  console.log(usrcompleted);
+  const usrOnlyCompleted = {}
+  Object.keys(usrcompleted).forEach((key)=>{
+    if (usrcompleted[key] > 0) {
+      usrOnlyCompleted[key] = usrcompleted[key]
+    }
+  })
+  console.log(usrOnlyCompleted);
 });
