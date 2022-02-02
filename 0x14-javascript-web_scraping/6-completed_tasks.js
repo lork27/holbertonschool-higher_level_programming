@@ -13,11 +13,11 @@ r(url, function (a, response, body) {
     }
   });
 
-  const usrOnlyCompleted = {}
-  Object.keys(usrcompleted).forEach((key)=>{
+  const usrOnlyCompleted = {};
+  Object.keys(usrcompleted).forEach((key) => {
     if (usrcompleted[key] > 0) {
-      usrOnlyCompleted[key] = usrcompleted[key]
+      usrOnlyCompleted[key] = usrcompleted[key];
     }
-  })
+  });
   console.log(usrOnlyCompleted);
 });
